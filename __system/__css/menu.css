@@ -1,0 +1,188 @@
+/* menu.css - 共享菜单样式文件 */
+
+/* 隐藏不需要的元素 */
+div#rot #rot_ctr1_bod_ctr1_blk1_custom {
+    display: none !important;
+}
+
+div#rot #rot_ctr1_bod_ctr1_bod {
+    display: none !important;
+}
+
+/* 主菜单容器样式 */
+div#rot #rot_ctr1_bod_ctr2_bod ul {
+    background-color: #eeeeee !important;
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* 主菜单项样式 */
+div#rot #rot_ctr1_bod_ctr2_bod ul li {
+    width: 108px !important;
+    
+    background-color: #d7d7d7 !important;
+    /*background-image: url('../../static/designs/images/repository/util_6x45_grey_shadow.png') !important;
+    background-color: #e8e8e8 !important;
+    */
+    background-position: right center !important;
+    background-repeat: no-repeat !important;
+    border-right: 1px solid #ffffff !important;
+    display: inline-block !important;
+    vertical-align: top !important;
+}
+
+/* 移除最后一个菜单项的边框和背景图 */
+div#rot #rot_ctr1_bod_ctr2_bod ul li.last,
+div#rot #rot_ctr1_bod_ctr2_bod ul li:last-child {
+    background-image: none !important;
+    border-right: none !important;
+}
+
+/* 主菜单链接样式 - 完全居中 */
+div#rot #rot_ctr1_bod_ctr2_bod ul li a {
+    width: 108px !important;
+    height: 50px !important;
+    font-size: 11px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;  /* 水平居中 */
+    padding: 0 5px !important;
+    box-sizing: border-box !important;
+    background-color: transparent !important;
+    text-decoration: none !important;
+    color: #333333 !important;
+    text-align: center !important;
+}
+
+/* 主菜单悬停效果 */
+div#rot #rot_ctr1_bod_ctr2_bod ul li a:hover {
+    background-color: #ff0000 !important;
+    color: #ffffff !important;
+}
+
+/* 特定菜单项调整 - CONTACT US需要更宽来覆盖灰色区域 */
+div#rot #rot_ctr1_bod_ctr2_bod ul li a.menu_1006594,
+div#rot #rot_ctr1_bod_ctr2_bod ul li a.menu_1006595 {
+    width: 108px !important;
+    height: 50px !important;
+}
+
+/* CONTACT US菜单项特殊处理 - 让它稍宽以覆盖右边空隙 */
+div#rot #rot_ctr1_bod_ctr2_bod ul li.menu_1006594,
+div#rot #rot_ctr1_bod_ctr2_bod ul li:has(a.menu_1006594) {
+    width: 128px !important;  /* 稍微增加宽度 */
+}
+
+div#rot #rot_ctr1_bod_ctr2_bod ul li.menu_1006594 a,
+div#rot #rot_ctr1_bod_ctr2_bod ul li a.menu_1006594 {
+    width: 128px !important;  /* 链接也要相应增宽 */
+}
+
+/* 选中状态 - 整个菜单项变红 */
+div#rot #rot_ctr1_bod_ctr2_bod ul li.active,
+div#rot #rot_ctr1_bod_ctr2_bod ul li.current,
+div#rot #rot_ctr1_bod_ctr2_bod ul li.selected {
+    background-color: #ff0000 !important;
+    background-image: none !important;  /* 移除选中时的背景图片 */
+}
+
+div#rot #rot_ctr1_bod_ctr2_bod ul li.active a,
+div#rot #rot_ctr1_bod_ctr2_bod ul li.current a,
+div#rot #rot_ctr1_bod_ctr2_bod ul li.selected a {
+    color: #ffffff !important;
+    background-color: transparent !important;  /* 链接背景保持透明 */
+}
+
+/* 下拉菜单容器样式 */
+div#rot #rot_ctr1_bod_ctr2_bod ul li ul {
+    position: absolute !important;
+    margin-left: -1px !important;
+    background-color: #ffffff !important;
+    border: 1px solid #cccccc !important;
+    padding: 0 !important;
+    list-style: none !important;
+    z-index: 1000 !important;
+}
+
+/* 下拉菜单项样式 */
+div#rot #rot_ctr1_bod_ctr2_bod ul li ul li {
+    background-color: #ffffff !important;
+    background-image: none !important;
+    width: auto !important;
+    min-width: 200px !important;
+    border-right: none !important;
+    border-bottom: 1px solid #f0f0f0 !important;
+    display: block !important;
+}
+
+/* 下拉菜单最后一项 */
+div#rot #rot_ctr1_bod_ctr2_bod ul li ul li:last-child {
+    border-bottom: none !important;
+}
+
+/* 下拉菜单链接样式 - 左对齐 */
+div#rot #rot_ctr1_bod_ctr2_bod ul li ul li a {
+    width: auto !important;
+    min-width: 200px !important;
+    height: auto !important;
+    padding: 12px 20px !important;
+    font-size: 12px !important;
+    display: block !important;  /* 改为block */
+    text-align: left !important;  /* 左对齐 */
+    background-color: transparent !important;
+    color: #333333 !important;
+    text-decoration: none !important;
+    white-space: nowrap !important;
+    box-sizing: border-box !important;
+}
+
+/* 专门针对menu_1006556（DOCUMENTS AND REPORTS）确保对齐 */
+div#rot #rot_ctr1_bod_ctr2_bod ul li ul li a#menu_1006556,
+div#rot #rot_ctr1_bod_ctr2_bod ul li ul li a.menu_1006556 {
+    padding: 12px 20px !important;  /* 确保与其他二级菜单项相同的padding */
+    padding-left: 20px !important;  /* 明确设置左边距 */
+    display: block !important;
+    text-align: left !important;
+    text-indent: 0 !important;  /* 移除任何文本缩进 */
+    margin-left: 0 !important;  /* 移除任何左边距 */
+}
+
+/* 确保所有二级菜单的li元素没有额外的内边距或边距 */
+div#rot #rot_ctr1_bod_ctr2_bod ul li ul li {
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+    text-indent: 0 !important;
+}
+
+/* 下拉菜单悬停效果 */
+div#rot #rot_ctr1_bod_ctr2_bod ul li ul li a:hover {
+    background-color: #ff0000 !important;
+    color: #ffffff !important;
+}
+
+/* 下拉菜单选中状态 */
+div#rot #rot_ctr1_bod_ctr2_bod ul li ul li.active,
+div#rot #rot_ctr1_bod_ctr2_bod ul li ul li.current,
+div#rot #rot_ctr1_bod_ctr2_bod ul li ul li.selected {
+    background-color: #ff0000 !important;
+}
+
+div#rot #rot_ctr1_bod_ctr2_bod ul li ul li.active a,
+div#rot #rot_ctr1_bod_ctr2_bod ul li ul li.current a,
+div#rot #rot_ctr1_bod_ctr2_bod ul li ul li.selected a {
+    color: #ffffff !important;
+}
+
+/* 确保主菜单文字可以换行 */
+div#rot #rot_ctr1_bod_ctr2_bod ul li a {
+    white-space: normal !important;  /* 允许换行 */
+    line-height: 1.2 !important;
+}
+
+/* 确保下拉菜单文字不换行 */
+div#rot #rot_ctr1_bod_ctr2_bod ul li ul li a {
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+}
