@@ -4,7 +4,7 @@ This project contains a demo of the new Educational Resources webpage
 
 ## ✅ Features Implemented
 
-- Created a new "Educational Resources" page
+- Created a new Educational Resources page with three languages
 - Built an external navigation menu using JavaScript
 - All links dynamically connect to existing hospital website pages
 - No changes were made to the original pages' internal structure
