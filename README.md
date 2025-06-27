@@ -1,6 +1,6 @@
 # Demo – Educational Resources Webpage
 
-This project contains a demo of the new "Educational Resources" webpage
+This project contains a demo of the new Educational Resources webpage
 
 ## ✅ Features Implemented
 
